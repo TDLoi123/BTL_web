@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/*Thanh trang chu*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-boxup input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.banner-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* Container thông tin khách hàng */
+.customer-info {
+    margin: 0 auto; /* Căn giữa container */
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Tiêu đề */
+.customer-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #dfffe0; /* Màu nền xanh nhạt */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Bảng thông tin khách hàng */
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.customer-table th,
+.customer-table td {
+    border: 1px solid #ddd; /* Viền bảng */
+    padding: 10px;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.customer-table th {
+    background-color: #e8ffe8; /* Màu nền tiêu đề bảng */
+    font-size: 16px;
+}
+
+.customer-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Màu nền xen kẽ cho các dòng */
+}
+
+.customer-table tr:hover {
+    background-color: #dfffe0; /* Hiệu ứng hover trên dòng */
+}
+
+/* Biểu tượng xử lý (xem và xóa) */
+.view-icon,
+.delete-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.view-icon:hover {
+    color: #4CAF50; /* Màu xanh khi hover biểu tượng xem */
+}
+
+button.remove-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+remove-btn:hover {
+    background-color: #ff9999;
+}
+
+/* Nút chuyển trang */
+.next-page-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50; /* Màu xanh lá cây */
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.next-page-btn:hover {
+    background-color: #45a049; /* Màu đậm hơn khi hover */
+}
+
+footer {
+    background-color: #f8d7f9; /* Màu hồng nhạt */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    border: none;
+    max-width: 1200px; /* Chiều rộng tối đa của container */
+    margin: 0 auto; /* Căn giữa container */
+}
+
+footer h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px; /* Điều chỉnh kích thước theo ý muốn */
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #673ab7; /* Màu tím */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    text-align: left;
+}
+
+.footer-bottom a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+    .product-list {
+        width: 860px; /* 4 sản phẩm * 200px + 3 khoảng cách * 20px */
+        margin: 0 auto; /* Căn giữa .product-list nếu muốn */
+    }
+}

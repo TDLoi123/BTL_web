@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+/*Thanh trang chu*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-boxup input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cart {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.banner-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+/*4 san pham*/
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.category {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.category a {
+    display: block; /* Hiển thị liên kết dạng khối */
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    margin-top: 5px; /* Tạo khoảng cách giữa ảnh và chữ */
+}
+
+
+.category-icon {
+    width: 120px;
+    height: 120px;
+}
+
+/*The san pham*/
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list {
+    clear: both;
+    display: flex;
+    justify-content: flex-start; /* Căn trái các sản phẩm */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: 200px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    box-sizing: border-box; /* Tính cả padding vào width */
+}
+
+.product-card a {
+    display: block;           /* Hiển thị dạng khối, giống như <h5> */
+    font-size: 1em;        /* Tăng kích thước chữ giống với <h5> nếu cần */
+    font-weight: bold;        /* Làm chữ đậm */
+    text-align: center;       /* Căn giữa nội dung */
+    margin:0;           /* Tạo khoảng cách phía trên và dưới */
+    text-decoration: none;    /* Loại bỏ gạch dưới */
+    color: #333;              /* Màu chữ giống các sản phẩm khác */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+}
+
+/*footer*/
+footer {
+    background-color: #f8d7f9; /* Màu hồng nhạt */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    border: none;
+    max-width: 1200px; /* Chiều rộng tối đa của container */
+    margin: 0 auto; /* Căn giữa container */
+}
+
+footer h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.search-box {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 350px; /* Điều chỉnh kích thước theo ý muốn */
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #673ab7; /* Màu tím */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.footer-bottom p {
+    text-align: left;
+}
+
+.footer-bottom a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+@media (min-width: 768px) {
+    .product-list {
+        width: 860px; /* 4 sản phẩm * 200px + 3 khoảng cách * 20px */
+        margin: 0 auto; /* Căn giữa .product-list nếu muốn */
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng Ký</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                /*can ô đăng nhập vào giữa*/
+                align-items: center;
+                height: 100vh;
+                background-color: #f8f9fa;
+            }
+            .register-container {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 400px;
+            }
+            .register-container h2 {
+                margin-bottom: 30px;
+            }
+            .input-group {
+                margin-right:7px;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .input-group input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .register-btn {
+                width: 103%;
+                padding: 10px;
+                background-color: #6366f1;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .register-btn:hover {
+                background-color: #4f46e5;
+            }
+            .login-link {
+                margin-left: 10px;
+                display: block;
+                margin-top: 10px;
+                color: #6366f1;
+                text-decoration: none;
+            }
+            .message {
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            .error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }         
+        </style>
+    </head>
+
+    <body>
+        <div class="register-container">
+            <h2>Đăng Ký</h2>
+            <div class="input-group">
+                <label for="name">Họ và Tên</label>
+                <input type="text" id="name" placeholder="Họ và Tên">
+            </div>
+            <div class="input-group">
+                <label for="username">Tài khoản</label>
+                <input type="text" id="username" placeholder="Tên tài khoản">
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Tối thiểu 8 kí tự">
+            </div>
+            <div class="input-group">
+                <label for="reupPassword">Nhập Lại Mật khẩu</label>
+                <input type="password" id="reupPassword" placeholder="Tối thiểu 8 kí tự">
+            </div>
+            <button class="register-btn" onclick="register()">Đăng Ký</button>
+            <a href="login.html" class="login-link">Đăng Nhập</a>
+            <div id="message" class="message" style="display: none;"></div>
+        </div>
+        <script>
+            function register() {
+                let name = document.getElementById("name").value;
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let reupPassword = document.getElementById("reupPassword").value;
+                let messageDiv = document.getElementById("message"); // Lấy phần tử thông báo
+
+                if (name && username && password && reupPassword) {
+                    if (password === reupPassword) {
+                        // Hiển thị thông báo thành công
+                        messageDiv.textContent = "Đăng ký thành công!";
+                        messageDiv.className = "message success";
+                        messageDiv.style.display = "block";
+
+                        // Ẩn thông báo và chuyển hướng sau 1 giây
+                        setTimeout(function() {
+                            messageDiv.style.display = "none"; // Ẩn thông báo
+                            window.location.href = "home_user.html"; // Chuyển hướng
+                        }, 1000);
+                    } else {
+                        // Hiển thị thông báo lỗi mật khẩu không khớp
+                        messageDiv.textContent = "Mật khẩu không khớp.";
+                        messageDiv.className = "message error";
+                        messageDiv.style.display = "block";
+
+                        // Ẩn thông báo sau 1.5 giây
+                        setTimeout(function() {
+                            messageDiv.style.display = "none";
+                        }, 1500);
+                    }
+                } else {
+                    // Hiển thị thông báo lỗi thiếu thông tin
+                    messageDiv.textContent = "Vui lòng nhập đầy đủ thông tin.";
+                    messageDiv.className = "message error";
+                    messageDiv.style.display = "block";
+
+                    // Ẩn thông báo sau 1.5 giây
+                    setTimeout(function() {
+                        messageDiv.style.display = "none";
+                    }, 1500);
+                }
+            }
+        </script>
+    </body>
+</html>

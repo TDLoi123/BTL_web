@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng Nhập</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                /*can ô đăng nhập vào giữa*/
+                align-items: center;
+                height: 100vh;
+                background-color: #f8f9fa;
+            }
+            .login-container {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                width: 400px;
+            }
+            .login-container h2 {
+                margin-bottom: 30px;
+            }
+            .input-group {
+                margin-right:7px;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            .input-group input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .login-btn {
+                width: 103%;
+                padding: 10px;
+                background-color: #6366f1;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .login-btn:hover {
+                background-color: #4f46e5;
+            }
+            .register-link {
+                margin-left: 10px;
+                display: block;
+                margin-top: 10px;
+                color: #6366f1;
+                text-decoration: none;
+            } 
+            .message {
+                margin-top: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .success {
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+            }
+            .error {
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+            }        
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Đăng Nhập</h2>
+            <div class="input-group">
+                <label for="username">Tài khoản</label>
+                <input type="text" id="username" placeholder="Tên tài khoản">
+            </div>
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Tối thiểu 8 kí tự">
+            </div>
+            <button class="login-btn" onclick="login()">Đăng Nhập</button>
+            <a href="register.html" class="register-link">Đăng ký</a>
+            <div id="message" class="message" style="display: none;"></div>
+        </div>
+        <script>
+            function login() {
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let messageDiv = document.getElementById("message");
+                if (username === "admin" && password === "admin") {
+                    messageDiv.textContent = "Đăng nhập thành công!";
+                    messageDiv.className = "message success";
+                    messageDiv.style.display = "block";
+
+                    setTimeout(function() {
+                        messageDiv.style.display = "none"; // Ẩn thông báo
+                        window.location.href = "home_admin.html"; // Chuyển hướng
+                    }, 1000);
+                } else if (username && password) {
+                    messageDiv.textContent = "Đăng nhập thành công!";
+                    messageDiv.className = "message success";
+                    messageDiv.style.display = "block";
+
+                    setTimeout(function() {
+                        messageDiv.style.display = "none"; // Ẩn thông báo
+                        window.location.href = "home_user.html"; // Chuyển hướng
+                    }, 1000);
+                } else {
+                    messageDiv.textContent = "Tài khoản hoặc mật khẩu không chính xác!";
+                    messageDiv.className = "message error";
+                    messageDiv.style.display = "block";
+                    
+                    setTimeout(function() {
+                        messageDiv.style.display = "none"; // Ẩn thông báo
+                    }, 2000);
+                }
+            }
+        </script>
+    </body>
+</html>

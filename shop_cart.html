@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Rau Củ</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="stylerepass.css">
+    <link rel="stylesheet" href="shop_cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo">🍃 DL Shop</a>
+        <div class="nav-links">
+            <a href="home_user.html">Trang chủ</a>
+            <a href="#">Mặt hàng</a>
+            <a href="#" id="openModal">Đổi mật khẩu</a>
+            <a href="login.html" id="logOut">Đăng xuất</a>
+        </div>
+        <div class="search-cart">
+            <input type="text" placeholder="Search product..." class="search-boxup">
+            <a href="shop_cart.html" class="cart">🛒 Giỏ hàng</a>
+        </div>
+    </nav>
+    
+    <header class="banner">
+        <img src="D:\Tải zề\rc1.jpg" class="banner-img" alt="Fresh Vegetables">
+    </header>
+    
+    <div class="cart-container">
+        <!-- Bảng giỏ hàng -->
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Tên</th>
+                    <th>Giá cả</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th>Xử lý</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sản phẩm 1 -->
+                <tr>
+                    <td><img src="D:\Tải zề\tto.jpg" alt="Tía Tô"></td>
+                    <td>Tía Tô</td>
+                    <td>15,000₫/kg</td>
+                    <td>1kg</td>
+                    <td>15,000₫</td>
+                    <td><button onclick="deleteRow(this)" class="remove-btn">Xóa</button></td>
+                </tr>
+
+                <!-- Sản phẩm 2 -->
+                <tr>
+                    <td><img src="D:\Tải zề\Đào.jpg" alt="Đào"></td>
+                    <td>Đào</td>
+                    <td>100,000₫/kg</td>
+                    <td>1kg</td>
+                    <td>100,000₫</td>
+                    <td><button onclick="deleteRow(this)" class="remove-btn">Xóa</button></td>
+                </tr>
+
+                <!-- Sản phẩm 3 -->
+                <tr>
+                    <td><img src="D:\Tải zề\cam.jpg" alt="Cam Ngọt"></td>
+                    <td>Cam Ngọt</td>
+                    <td>50,000₫/kg</td>
+                    <td>1kg</td>
+                    <td>50,000₫</td>
+                    <td><button onclick="deleteRow(this)" class="remove-btn">Xóa</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Thông tin đơn hàng -->
+        <div class="order-summary">
+            <h2 style="text-align: center;">Thông Tin Đơn Hàng</h2>
+            <p><strong>Phải trả:</strong> 165,000₫</p>
+            <p><strong>Phí vận chuyển:</strong> 0₫</p>
+            <p><strong>Tổng số tiền:</strong> 165,000₫</p>
+
+            <!-- Nút thanh toán -->
+            <button class="checkout-btn">Thanh toán ngay!</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <h1>DL Shop</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Product...">
+                <button>Search</button>
+            </div>
+            <div class="footer-links">
+                <a href="#">About us</a>
+                <span>0123456789</span>
+                <a href="#">Contact us</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2022 Brand, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Sitemap</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="password-modal" id="passwordModal">
+        <div class="login-container">
+            <span class="close">&times;</span>
+            <h2>Đổi mật khẩu</h2>
+            <div class="input-group">
+                <label for="oldPassword">Mật khẩu cũ</label>
+                <input type="password" id="oldPassword" placeholder="Nhập mật khẩu cũ">
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Mật khẩu mới</label>
+                <input type="password" id="newPassword" placeholder="Tối thiểu 8 kí tự">
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Nhập lại mật khẩu</label>
+                <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới">
+            </div>
+            <button class="repass-btn">Đổi mật khẩu</button>
+        </div>
+    </div>    
+    <script src="repass.js"></script>
+    <script>
+        // Hàm xóa dòng trong bảng
+        function deleteRow(button) {
+            // Tìm dòng cha của nút "Xóa"
+            const row = button.closest("tr");
+
+            // Xóa dòng khỏi bảng
+            row.remove();
+        }
+    </script>
+</body>
+</html>

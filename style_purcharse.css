@@ -1,0 +1,119 @@
+
+/* Container chính */
+.product-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 30px; /* Tăng khoảng cách giữa hình ảnh và thông tin sản phẩm */
+    padding: 30px;
+    background-color: #ffffff; /* Màu nền trắng cho container */
+    border-radius: 12px; /* Bo góc container */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+
+/* Hình ảnh sản phẩm */
+.product-image img {
+    width: 400px; /* Tăng kích thước hình ảnh */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Thông tin sản phẩm */
+.product-info {
+    width: 400px; /* Đảm bảo container thông tin sản phẩm có chiều rộng cố định */
+    background-color: #e8ffe8;
+    padding: 30px; /* Tăng khoảng cách bên trong */
+    border-radius: 12px;
+}
+
+.product-name {
+    font-size: 28px; /* Tăng kích thước chữ tiêu đề */
+    margin-bottom: 15px;
+}
+
+.product-code,
+.product-status {
+    font-size: 18px; /* Tăng kích thước chữ thông tin phụ */
+    margin-bottom: 15px;
+}
+
+/* Giá sản phẩm */
+.product-price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product-price label {
+    font-size: 20px; /* Tăng kích thước chữ nhãn giá */
+}
+
+.product-price span {
+    font-size: 20px; /* Tăng kích thước giá tiền */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Điều chỉnh số lượng */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Tăng khoảng cách giữa các nút và input */
+    margin-bottom: 20px;
+}
+
+.quantity-btn {
+    background-color: #ffcccc;
+    border: none;
+    padding: 12px; /* Tăng kích thước nút +/- */
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #ff9999;
+}
+
+#quantity-display {
+    font-size: 18px; /* Hiển thị số lượng to hơn */
+}
+
+/* Nút đặt hàng và thêm vào giỏ hàng */
+.add-to-cart-btn,
+.order-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 14px 24px; /* Tăng kích thước nút đặt hàng */
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover,
+.order-btn:hover {
+    opacity: 0.7;
+}
+
+/* Ghi chú */
+textarea {
+    width: calc(100% - 20px); /* Đảm bảo textarea chiếm toàn bộ chiều rộng trừ padding */
+    height: 100px; /* Tăng chiều cao textarea */
+}
+
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+} 
