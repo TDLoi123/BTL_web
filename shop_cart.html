@@ -81,7 +81,7 @@
             <p><strong>Tổng số tiền:</strong> 165,000₫</p>
 
             <!-- Nút thanh toán -->
-            <button class="checkout-btn">Thanh toán ngay!</button>
+            <button onclick="openPaymentModal()" class="checkout-btn">Thanh toán ngay!</button>
         </div>
     </div>
 
@@ -122,8 +122,27 @@
             <button onclick="repass()" class="repass-btn">Đổi mật khẩu</button>
             <div id="message02" class="message" style="display: none;"></div>
         </div>
-    </div>    
+    </div>   
+
+    <div id="paymentModal" class="modal-pay">
+        <div class="modal-content">
+            <span class="close-button" onclick="closePaymentModal()">&times;</span>
+            <h2>Thông tin thanh toán</h2>
+        
+            <!-- Mã QR -->
+            <img src="D:\Tải zề\qr.png" alt="Mã QR" class="qr-code">
+        
+            <!-- Thông tin ngân hàng -->
+            <p><strong>Số tài khoản:</strong> 1234567890</p>
+            <p><strong>Ngân hàng:</strong> Vietcombank</p>
+            <p><strong>Tên người nhận:</strong> Nguyễn Văn A</p>
+        
+            <p>Quét mã QR hoặc chuyển khoản theo thông tin trên để hoàn tất thanh toán.</p>
+        </div>
+    </div>      
+
     <script src="repass.js"></script>
+    <script src="payment.js"></script>
     <script>
         // Hàm xóa dòng trong bảng
         function deleteRow(button) {

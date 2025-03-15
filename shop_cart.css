@@ -73,3 +73,43 @@
 .checkout-btn:hover {
     background-color: #45a049;
 }
+
+.modal-pay {
+    display: none; /* Ẩn modal mặc định */
+    position: fixed; /* Cố định vị trí trên màn hình */
+    top: 0;
+    left: 0;
+    width: 100%; /* Chiếm toàn bộ chiều ngang */
+    height: 100%; /* Chiếm toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen trong suốt */
+    z-index: 1000; /* Đảm bảo modal luôn ở trên cùng */
+}
+
+
+.modal-content {
+    position: absolute; /* Định vị tuyệt đối trong modal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Canh giữa modal */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Chiều rộng của modal */
+    max-width: 600px; /* Chiều rộng tối đa */
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+.qr-code {
+    max-width: 200px; /* Kích thước tối đa của mã QR */
+    margin: 10px auto; /* Canh giữa mã QR */
+}
