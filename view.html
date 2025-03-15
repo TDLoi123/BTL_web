@@ -11,9 +11,9 @@
     <nav class="navbar">
         <a class="logo">🍃 DL Shop</a>
         <div class="nav-links">
-            <a href="#">Trang chủ</a>
+            <a href="home_admin.html">Trang chủ</a>
             <a href="addProDuct.html">Thêm hàng</a>
-            <a href="view.html">Xem hàng</a>
+            <a href="#">Xem hàng</a>
             <a id="openModal">Đổi mật khẩu</a>
             <a href="login.html" id="logOut">Đăng xuất</a>
         </div>
@@ -29,77 +29,97 @@
     <!-- Thông tin tài khoản khách hàng -->
     <div class="customer-info">
         <!-- Tiêu đề -->
-        <h2 class="customer-title">Thông tin tài khoản khách hàng</h2>
+        <h2 class="customer-title">Quản lý sản phẩm</h2>
 
         <!-- Bảng thông tin khách hàng -->
         <table class="customer-table">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Họ và Tên</th>
-                    <th>Tài khoản</th>
-                    <th>Mật khẩu</th>
+                    <th>Sản phẩm</th>
+                    <th>Tên</th>
+                    <th>Số lượng(Kg)</th>
+                    <th>Đã bán(Kg)</th>
+                    <th>Giá thành/Kg</th>
+                    <th>Còn lại</th>
                     <th>Xử lý</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Dữ liệu mẫu -->
                 <tr>
-                    <td>001</td>
-                    <td>Trần Đức Lợi</td>
-                    <td>tranducloi01</td>
                     <td>
-                        *******
-                        <i class="view-icon">&#128065;</i>
+                        <img src="D:\Tải zề\tto.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
                     </td>
-                    <td>
-                        <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Trần Đức Lợi</td>
-                    <td>tranducloi02</td>
-                    <td>
-                        *******
-                        <i class="view-icon">&#128065;</i>
-                    </td>
+                    <td>Tía tô</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>15.000</td>
+                    <td>9</td>
                     <td>
                         <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
                     </td>
                 </tr>
                 <tr>
-                    <td>003</td>
-                    <td>Trần Đức Lợi</td>
-                    <td>tranducloi03</td>
                     <td>
-                        *******
-                        <i class="view-icon">&#128065;</i>
+                        <img src="D:\Tải zề\Đào.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
                     </td>
-                    <td>
-                        <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>004</td>
-                    <td>Trần Đức Lợi</td>
-                    <td>tranducloi04</td>
-                    <td>
-                        *******
-                        <i class="view-icon">&#128065;</i>
-                    </td>
+                    <td>Đào</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>100.000</td>
+                    <td>9</td>
                     <td>
                         <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
                     </td>
                 </tr>
                 <tr>
-                    <td>005</td>
-                    <td>Trần Đức Lợi</td>
-                    <td>tranducloi05</td>
                     <td>
-                        *******
-                        <i class="view-icon">&#128065;</i>
+                        <img src="D:\Tải zề\cam.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
                     </td>
+                    <td>Cam Ngọt</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>50.000</td>
+                    <td>9</td>
+                    <td>
+                        <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="D:\Tải zề\chery.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
+                    </td>
+                    <td>Cherry</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>200.000</td>
+                    <td>9</td>
+                    <td>
+                        <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="D:\Tải zề\tto.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
+                    </td>
+                    <td>Tía tô</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>15.000</td>
+                    <td>9</td>
+                    <td>
+                        <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="D:\Tải zề\dứa.jpg" alt style="width: 50px; height: 50px; border-radius: 10px;">
+                    </td>
+                    <td>Dứa</td>
+                    <td>10</td>
+                    <td>1</td>
+                    <td>80.000</td>
+                    <td>9</td>
                     <td>
                         <button onclick="deleteRow(this)" class="remove-btn"><i>&#128465;</i></button>
                     </td>

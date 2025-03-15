@@ -27,7 +27,7 @@ function repass(){
     let password = document.getElementById("oldPassword").value;
     let newPassword = document.getElementById("newPassword").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
-    let messageDiv = document.getElementById("message");
+    let messageDiv = document.getElementById("message02");
 
     if(password && newPassword && confirmPassword){
         if(newPassword.length !=0){ // Kiểm tra độ dài mật khẩu mới
@@ -39,7 +39,7 @@ function repass(){
                 // Ẩn thông báo và chuyển hướng sau 1.5 giây
                 setTimeout(function() {
                     messageDiv.style.display = "none"; // Ẩn thông báo
-                    window.location.href = "home_user.html"; // Chuyển hướng
+                    window.location.href = "login.html"; // Chuyển hướng
                 }, 1500);
             }else{
                 messageDiv.textContent = "Mật khẩu mới không khớp!";

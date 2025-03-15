@@ -14,7 +14,7 @@
         <div class="nav-links">
             <a href="home_user.html">Trang chủ</a>
             <a href="#">Mặt hàng</a>
-            <a href="#" id="openModal">Đổi mật khẩu</a>
+            <a id="openModal">Đổi mật khẩu</a>
             <a href="login.html" id="logOut">Đăng xuất</a>
         </div>
         <div class="search-cart">
@@ -119,7 +119,8 @@
                 <label for="confirmPassword">Nhập lại mật khẩu</label>
                 <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu mới">
             </div>
-            <button class="repass-btn">Đổi mật khẩu</button>
+            <button onclick="repass()" class="repass-btn">Đổi mật khẩu</button>
+            <div id="message02" class="message" style="display: none;"></div>
         </div>
     </div>    
     <script src="repass.js"></script>

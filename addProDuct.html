@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Rau Củ</title>
-    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="home_admin.css">
     <link rel="stylesheet" href="stylerepass.css">
-    <link rel="stylesheet" href="style_purcharse.css">
+    <link rel="stylesheet" href="addProduct.css">
 </head>
 <body>
     <nav class="navbar">
         <a class="logo">🍃 DL Shop</a>
         <div class="nav-links">
-            <a href="home_user.html">Trang chủ</a>
-            <a href="#">Mặt hàng</a>
-            <a href="#" id="openModal">Đổi mật khẩu</a>
+            <a href="home_admin.html">Trang chủ</a>
+            <a href="#">Thêm hàng</a>
+            <a href="view.html">Xem hàng</a>
+            <a id="openModal">Đổi mật khẩu</a>
             <a href="login.html" id="logOut">Đăng xuất</a>
         </div>
         <div class="search-cart">
             <input type="text" placeholder="Search product..." class="search-boxup">
-            <a href="shop_cart.html" class="cart">🛒 Giỏ hàng</a>
         </div>
     </nav>
     
@@ -27,44 +27,36 @@
         <img src="D:\Tải zề\rc1.jpg" class="banner-img" alt="Fresh Vegetables">
     </header>
     
-    <div class="product-container">
-        <!-- Hình ảnh sản phẩm -->
-        <div class="product-image">
-            <img src="D:\Tải zề\Đào.jpg" alt="Đào">
-        </div>
+    <div class="container">
+        <h1>Thêm sản phẩm</h1>
+        <form class="form" onsubmit="event.preventDefault(); addProduct();">
+            <label for="product-name">Tên sản phẩm</label>
+            <input type="text" id="product-name" placeholder="Tên sản phẩm" required>
 
-        <!-- Thông tin sản phẩm -->
-        <div class="product-info">
-            <h1 class="product-name">Tên sản phẩm: Đào</h1>
-            <p class="product-code">Mã sản phẩm: 123</p>
-            <p class="product-status">Trình trạng: Còn hàng</p>
+            <label for="quantity">Số lượng(Kg)</label>
+            <input type="number" id="quantity" placeholder="Số lượng" required>
 
-            <!-- Giá sản phẩm -->
-            <div class="product-price">
-                <label for="price">Giá:</label>
-                <span id="price">100₫/kg</span>
+            <label for="price">Giá thành/Kg</label>
+            <input type="text" id="price" placeholder="Giá thành" required>
+
+            <div class="image-upload">
+                <p id="upload-text">Thêm ảnh minh họa</p>
+                <!-- Nút upload -->
+                <label for="file-input" class="upload-box" id="upload-box">
+                    <span>+</span>
+                </label>
+                <!-- Input file ẩn -->
+                <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="handleFileUpload(event)">
+                <!-- Hiển thị ảnh đã chọn -->
+                <img id="image-preview" src="" alt="" style="display: none; margin-top: 10px; max-width: 150px; border-radius: 10px;">
             </div>
 
-            <!-- Số lượng và nút thêm vào giỏ hàng -->
-            <div class="quantity-control">
-                <label for="quantity">Số lượng:</label>
-                <button class="quantity-btn" id="decrement">-</button>
-                <p id="quantity-display">1</p> <!-- Hiển thị số lượng -->
-                <button class="quantity-btn" id="increment">+</button>
-            </div>
-
-            <!-- Nút thêm vào giỏ hàng -->
-            <button onclick="addCart()" class="add-to-cart-btn">Thêm vào giỏ hàng</button>
-            <button onclick="order()" class="order-btn">Đặt hàng</button>
-
-            <!-- Ghi chú -->
-            <textarea placeholder="Ghi chú nhập hàng tại đây"></textarea>
-            <div id="message" class="message" style="display: none;"></div>
-        </div>
+            <!-- Nút thêm sản phẩm -->
+            <button type="submit" class="submit-button">Thêm sản phẩm</button>
+            <!-- Thông báo thành công -->
+            <div id="message03" class="message" style="display: none;"></div>
+        </form>
     </div>
-
-    <!-- JavaScript -->
-    <script src="purcharse.js"></script>
 
     <footer>
         <div class="footer-container">
@@ -103,7 +95,8 @@
             <button onclick="repass()" class="repass-btn">Đổi mật khẩu</button>
             <div id="message02" class="message" style="display: none;"></div>
         </div>
-    </div>    
+    </div> 
     <script src="repass.js"></script>
+    <script src="addProduct.js"></script>
 </body>
 </html>
